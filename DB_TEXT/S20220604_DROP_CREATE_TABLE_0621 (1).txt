@@ -1,0 +1,1032 @@
+drop table check_product;
+drop table product_info;
+drop table mypage;
+drop table banner;
+drop table board;
+drop table coupon;
+drop table faq;
+drop table readcheck;
+drop table basket;
+drop table main_basket;
+drop table message;
+drop table review;
+drop table payment;
+drop table participant;
+drop table chatting;
+drop table product;
+drop table member;
+drop table chk_level;
+
+/* 회원정보 */
+CREATE TABLE member (
+   user_id VARCHAR2(30) NOT NULL, /* 아이디  */
+   user_pw VARCHAR2(30) NOT NULL, /* 비밀번호 */
+   user_name VARCHAR2(50) NOT NULL, /* 이름 */
+   email VARCHAR2(40) NOT NULL, /* 이메일 */
+   con_tel VARCHAR2(30) NOT NULL, /* 휴대폰번호 */
+   user_photo VARCHAR2(100), /* 프로필사진 */
+   con_addr1 VARCHAR2(255), /* 소비자주소 */
+   con_addr2 VARCHAR2(255), /* 소비자상세주소 */
+   sell_name VARCHAR2(50), /* 판매자 상호명 */
+   sell_tel VARCHAR2(30), /* 판매자 연락처 */
+   sell_photo VARCHAR2(100), /* 판매자 상호사진 */
+   sell_num VARCHAR2(30), /* 판매자 사업자번호 */
+   sell_addr1 VARCHAR2(255), /* 판매자주소 */
+   sell_addr2 VARCHAR2(255), /* 판매자상세주소 */
+   m_level VARCHAR2(1) NOT NULL, /* 등급 */
+   join_date DATE NOT NULL, /* 가입일 */
+   nickname VARCHAR2(20), /* 채팅익명이름 */
+   nick_photo VARCHAR2(100), /* 채팅익명프로필사진 */
+   auth_status VARCHAR2(1) /*회원가입인증상태(인증:1)*/
+);
+
+CREATE UNIQUE INDEX PK_member2
+   ON member (
+      user_id ASC
+   );
+
+ALTER TABLE member
+   ADD
+      CONSTRAINT PK_member2
+      PRIMARY KEY (
+         user_id
+      );
+
+COMMENT ON TABLE member IS '회원정보';
+
+COMMENT ON COLUMN member.user_id IS '아이디 ';
+
+COMMENT ON COLUMN member.user_pw IS '비밀번호';
+
+COMMENT ON COLUMN member.user_name IS '이름';
+
+COMMENT ON COLUMN member.email IS '이메일';
+
+COMMENT ON COLUMN member.con_tel IS '휴대폰번호';
+
+COMMENT ON COLUMN member.user_photo IS '프로필사진';
+
+COMMENT ON COLUMN member.con_addr1 IS '소비자주소';
+
+COMMENT ON COLUMN member.con_addr2 IS '소비자상세주소';
+
+COMMENT ON COLUMN member.sell_name IS '판매자 상호명';
+
+COMMENT ON COLUMN member.sell_tel IS '판매자 연락처';
+
+COMMENT ON COLUMN member.sell_photo IS '판매자 상호사진';
+
+COMMENT ON COLUMN member.sell_num IS '판매자 사업자번호';
+
+COMMENT ON COLUMN member.sell_addr1 IS '판매자주소';
+
+COMMENT ON COLUMN member.sell_addr2 IS '판매자상세주소';
+
+COMMENT ON COLUMN member.m_level IS '등급';
+
+COMMENT ON COLUMN member.join_date IS '가입일';
+
+COMMENT ON COLUMN member.nickname IS '채팅익명이름';
+
+COMMENT ON COLUMN member.nick_photo IS '채팅익명프로필사진';
+
+COMMENT ON COLUMN member.auth_status IS '회원가입인증상태(인증:1)';
+
+/* 판매자신청 */
+CREATE TABLE chk_level (
+   user_id VARCHAR2(20) NOT NULL, /* 아이디  */
+   chk NUMBER(1) /* 승인요청상태  */
+);
+
+CREATE UNIQUE INDEX PK_chk_level
+   ON chk_level (
+      user_id ASC
+   );
+
+ALTER TABLE chk_level
+   ADD
+      CONSTRAINT PK_chk_level
+      PRIMARY KEY (
+         user_id
+      );
+
+COMMENT ON TABLE chk_level IS '판매자신청';
+
+COMMENT ON COLUMN chk_level.user_id IS '아이디 ';
+
+COMMENT ON COLUMN chk_level.chk IS '승인요청상태 ';
+
+
+/* 찜한 상품 목록 */
+CREATE TABLE check_product (
+   pro_num NUMBER(5) NOT NULL, /* 상품판매번호  */
+   user_id VARCHAR2(20) NOT NULL /* 판매자 아이디(구매자 아이디) */
+);
+
+CREATE UNIQUE INDEX PK_check_product
+   ON check_product (
+      pro_num ASC,
+      user_id ASC
+   );
+
+ALTER TABLE check_product
+   ADD
+      CONSTRAINT PK_check_product
+      PRIMARY KEY (
+         pro_num,
+         user_id
+      );
+
+COMMENT ON TABLE check_product IS '찜한 상품 목록';
+
+COMMENT ON COLUMN check_product.pro_num IS '상품판매번호 ';
+
+COMMENT ON COLUMN check_product.user_id IS '판매자 아이디(구매자 아이디)';
+
+/* 상품판매  */
+CREATE TABLE product (
+   pro_num NUMBER(5) NOT NULL, /* 상품판매번호  */
+   pro_type1 NUMBER(3) NOT NULL, /* 상품 대분류 */
+   pro_type2 NUMBER(3) NOT NULL, /* 상품 중분류 */
+   user_id VARCHAR2(20) NOT NULL, /* 판매자 아이디 */
+   pro_price NUMBER(20) NOT NULL, /* 판매가격 */
+   pro_title VARCHAR2(1000) NOT NULL, /* 상품판매글제목  */
+   pro_write VARCHAR2(4000) NOT NULL, /* 상품판매상세글 */
+   pro_photo VARCHAR2(1000) NOT NULL, /* 상품판매메인사진 */
+   pro_pic VARCHAR2(4000) NOT NULL, /* 상품판매상세사진 */
+   pro_date DATE NOT NULL, /* 작성일 */
+   amount NUMBER(10) NOT NULL, /* 재고 */
+   sell_amount NUMBER(10), /* 판매수량 */
+   pro_status NUMBER(2) /* 상품판매상태(1:판매 2:삭제) */
+);
+
+CREATE UNIQUE INDEX PK_product
+   ON product (
+      pro_num ASC
+   );
+
+ALTER TABLE product
+   ADD
+      CONSTRAINT PK_product
+      PRIMARY KEY (
+         pro_num
+      );
+
+COMMENT ON TABLE product IS '상품판매 ';
+
+COMMENT ON COLUMN product.pro_num IS '상품판매번호 ';
+
+COMMENT ON COLUMN product.pro_type1 IS '상품 대분류';
+
+COMMENT ON COLUMN product.pro_type2 IS '상품 중분류';
+
+COMMENT ON COLUMN product.user_id IS '판매자 아이디';
+
+COMMENT ON COLUMN product.pro_price IS '판매가격';
+
+COMMENT ON COLUMN product.pro_title IS '상품판매글제목 ';
+
+COMMENT ON COLUMN product.pro_write IS '상품판매상세글';
+
+COMMENT ON COLUMN product.pro_photo IS '상품판매메인사진';
+
+COMMENT ON COLUMN product.pro_pic IS '상품판매상세사진';
+
+COMMENT ON COLUMN product.pro_date IS '작성일';
+
+COMMENT ON COLUMN product.amount IS '재고';
+
+COMMENT ON COLUMN product.sell_amount IS '판매수량';
+
+COMMENT ON COLUMN product.pro_status IS '상품판매상태(1:판매 2:삭제)';
+
+/* 마이페이지  */
+CREATE TABLE MyPage (
+   pay_tot_num NUMBER(20) NOT NULL, /* 총결제번호 */
+   pro_num NUMBER(5) NOT NULL, /* 상품판매번호  */
+   quantity NUMBER(5), /* 수량 */
+   order_status VARCHAR2(1) DEFAULT '1' NOT NULL, /* 주문처리상태 */
+   purchase_status VARCHAR2(1) DEFAULT '1' NOT NULL, /* 구매확정 */
+   product_status VARCHAR2(1) DEFAULT '1' NOT NULL, /* 출고처리 */
+   refund_status VARCHAR2(1) DEFAULT '1' NOT NULL, /* 취소/환불 */
+   refund_reason VARCHAR2(1) DEFAULT '1' NOT NULL /* 취소/환불 사유 */
+);
+
+CREATE UNIQUE INDEX PK_MyPage
+   ON MyPage (
+      pay_tot_num ASC,
+      pro_num ASC
+   );
+
+ALTER TABLE MyPage
+   ADD
+      CONSTRAINT PK_MyPage
+      PRIMARY KEY (
+         pay_tot_num,
+         pro_num
+      );
+
+COMMENT ON TABLE MyPage IS '주문내역 ';
+
+COMMENT ON COLUMN MyPage.pay_tot_num IS '총결제번호';
+
+COMMENT ON COLUMN MyPage.pro_num IS '상품판매번호 ';
+
+COMMENT ON COLUMN MyPage.quantity IS '수량';
+
+COMMENT ON COLUMN MyPage.order_status IS '주문처리상태';
+
+COMMENT ON COLUMN MyPage.purchase_status IS '구매확정';
+
+COMMENT ON COLUMN MyPage.product_status IS '출고처리';
+
+COMMENT ON COLUMN MyPage.refund_status IS '취소/환불';
+
+COMMENT ON COLUMN MyPage.refund_reason IS '취소/환불 사유';
+
+/* 문의 */
+CREATE TABLE faq (
+   faq_num NUMBER NOT NULL, /* 글번호 */
+   faq_category NUMBER NOT NULL, /* 유형  */
+   faq_subject VARCHAR2(200) NOT NULL, /* 제목  */
+   faq_content VARCHAR2(4000) NOT NULL, /* 문의내용  */
+   user_id VARCHAR2(20), /* 작성자  */
+   faq_phone VARCHAR2(30), /* 연락처  */
+   faq_email VARCHAR2(40), /* 이메일  */
+   faq_pass NUMBER, /* 비밀번호  */
+   user_date DATE NOT NULL, /* 작성일  */
+   admin_id VARCHAR2(20), /* 답변자  */
+   admin_content VARCHAR2(4000), /* 답변내용   */
+   admin_date DATE, /* 답변일  */
+   faq_check NUMBER NOT NULL, /* 답변완료  */
+   login_check NUMBER NOT NULL /* 로그인확인  */
+);
+
+CREATE UNIQUE INDEX PK_faq
+   ON faq (
+      faq_num ASC
+   );
+
+ALTER TABLE faq
+   ADD
+      CONSTRAINT PK_faq
+      PRIMARY KEY (
+         faq_num
+      );
+
+COMMENT ON TABLE faq IS '문의';
+
+COMMENT ON COLUMN faq.faq_num IS '글번호';
+
+COMMENT ON COLUMN faq.faq_category IS '유형 ';
+
+COMMENT ON COLUMN faq.faq_subject IS '제목 ';
+
+COMMENT ON COLUMN faq.faq_content IS '문의내용 ';
+
+COMMENT ON COLUMN faq.user_id IS '작성자 ';
+
+COMMENT ON COLUMN faq.faq_phone IS '연락처 ';
+
+COMMENT ON COLUMN faq.faq_email IS '이메일 ';
+
+COMMENT ON COLUMN faq.faq_pass IS '비밀번호 ';
+
+COMMENT ON COLUMN faq.user_date IS '작성일 ';
+
+COMMENT ON COLUMN faq.admin_id IS '답변자 ';
+
+COMMENT ON COLUMN faq.admin_content IS '답변내용  ';
+
+COMMENT ON COLUMN faq.admin_date IS '답변일 ';
+
+COMMENT ON COLUMN faq.faq_check IS '답변완료 ';
+
+COMMENT ON COLUMN faq.login_check IS '로그인확인 ';
+
+/* 쿠폰 */
+CREATE TABLE coupon (
+   user_id VARCHAR2(20) NOT NULL, /* 구매자아이디 */
+   cp_num NUMBER NOT NULL, /* 쿠폰번호 */
+   cp_name VARCHAR2(100) NOT NULL, /* 쿠폰명  */
+   cp_category NUMBER NOT NULL, /* 유형  */
+   cp_price NUMBER NOT NULL, /* 할인금액 */
+   st_date  DATE NOT NULL, /* 시작일  */
+   end_date  DATE NOT NULL, /* 마지막일  */
+   cp_status NUMBER /* 쿠폰사용 */
+);
+
+CREATE UNIQUE INDEX PK_coupon2
+   ON coupon (
+      user_id ASC,
+      cp_num ASC
+   );
+
+ALTER TABLE coupon
+   ADD
+      CONSTRAINT PK_coupon2
+      PRIMARY KEY (
+         user_id,
+         cp_num
+      );
+
+COMMENT ON TABLE coupon IS '쿠폰';
+
+COMMENT ON COLUMN coupon.user_id IS '아이디';
+
+COMMENT ON COLUMN coupon.cp_num IS '쿠폰번호';
+
+COMMENT ON COLUMN coupon.cp_name IS '쿠폰명 ';
+
+COMMENT ON COLUMN coupon.cp_category IS '유형 ';
+
+COMMENT ON COLUMN coupon.cp_price IS '할인금액';
+
+COMMENT ON COLUMN coupon.st_date  IS '시작일 ';
+
+COMMENT ON COLUMN coupon.end_date  IS '마지막일 ';
+
+COMMENT ON COLUMN coupon.cp_status IS '쿠폰사용';
+
+/* 배너 */
+CREATE TABLE banner (
+   bn_num  NUMBER NOT NULL, /* 배너번호  */
+   board_num NUMBER NOT NULL, /* 글번호 */
+   bn_name  VARCHAR2(200), /* 배너명   */
+   bn_category NUMBER, /* 유형  */
+   bn_photo VARCHAR2(100) /* 배너사진  */
+);
+
+CREATE UNIQUE INDEX PK_banner2
+   ON banner (
+      bn_num  ASC
+   );
+
+ALTER TABLE banner
+   ADD
+      CONSTRAINT PK_banner2
+      PRIMARY KEY (
+         bn_num 
+      );
+
+COMMENT ON TABLE banner IS '배너';
+
+COMMENT ON COLUMN banner.bn_num  IS '배너번호 ';
+
+COMMENT ON COLUMN banner.board_num IS '글번호';
+
+COMMENT ON COLUMN banner.bn_name  IS '배너명  ';
+
+COMMENT ON COLUMN banner.bn_category IS '유형 ';
+
+COMMENT ON COLUMN banner.bn_photo IS '배너사진 ';
+
+/* 공지사항 */
+CREATE TABLE board (
+   board_num NUMBER NOT NULL, /* 글번호 */
+   board_category  NUMBER NOT NULL, /* 유형  */
+   board_subject  VARCHAR2(200) NOT NULL, /* 제목  */
+   board_content VARCHAR2(4000) NOT NULL, /* 내용  */
+   user_id VARCHAR2(20) NOT NULL, /* 작성자  */
+   board_reg_date  DATE DEFAULT sysdate NOT NULL, /* 작성일  */
+   board_hits  NUMBER /* 조회수  */
+);
+
+CREATE UNIQUE INDEX PK_board
+   ON board (
+      board_num ASC
+   );
+
+ALTER TABLE board
+   ADD
+      CONSTRAINT PK_board
+      PRIMARY KEY (
+         board_num
+      );
+
+COMMENT ON TABLE board IS '공지사항';
+
+COMMENT ON COLUMN board.board_num IS '글번호';
+
+COMMENT ON COLUMN board.board_category  IS '유형 ';
+
+COMMENT ON COLUMN board.board_subject  IS '제목 ';
+
+COMMENT ON COLUMN board.board_content IS '내용 ';
+
+COMMENT ON COLUMN board.user_id IS '작성자 ';
+
+COMMENT ON COLUMN board.board_reg_date  IS '작성일 ';
+
+COMMENT ON COLUMN board.board_hits  IS '조회수 ';
+
+/* 상품기본정보 */
+CREATE TABLE product_info (
+   pro_type1 NUMBER(3) NOT NULL, /* 상품 대분류 */
+   pro_type2 NUMBER(3) NOT NULL, /* 상품 중분류 */
+   pro_content VARCHAR2(100) /* 상품내용  */
+);
+
+CREATE UNIQUE INDEX PK_product_info2
+   ON product_info (
+      pro_type1 ASC,
+      pro_type2 ASC
+   );
+
+ALTER TABLE product_info
+   ADD
+      CONSTRAINT PK_product_info2
+      PRIMARY KEY (
+         pro_type1,
+         pro_type2
+      );
+
+COMMENT ON TABLE product_info IS '상품기본정보';
+
+COMMENT ON COLUMN product_info.pro_type1 IS '상품 대분류';
+
+COMMENT ON COLUMN product_info.pro_type2 IS '상품 중분류';
+
+COMMENT ON COLUMN product_info.pro_content IS '상품내용 ';
+
+/* 참여자 */
+CREATE TABLE participant (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   user_id VARCHAR2(20 BYTE) NOT NULL /* 아이디 */
+);
+
+CREATE UNIQUE INDEX PK_participant
+   ON participant (
+      room_num ASC,
+      user_id ASC
+   );
+
+ALTER TABLE participant
+   ADD
+      CONSTRAINT PK_participant
+      PRIMARY KEY (
+         room_num,
+         user_id
+      );
+
+COMMENT ON TABLE participant IS '참여자';
+
+COMMENT ON COLUMN participant.room_num IS '방번호';
+
+COMMENT ON COLUMN participant.user_id IS '아이디';
+
+/* 읽은 메세지확인 */
+CREATE TABLE readcheck (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   msg_num NUMBER(4) NOT NULL, /* 메세지번호 */
+   user_id VARCHAR2(20 BYTE) NOT NULL, /* 아이디 */
+   read NUMBER(2) /* 읽은여부 */
+);
+
+CREATE UNIQUE INDEX PK_readcheck
+   ON readcheck (
+      room_num ASC,
+      msg_num ASC,
+      user_id ASC
+   );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT PK_readcheck
+      PRIMARY KEY (
+         room_num,
+         msg_num,
+         user_id
+      );
+
+COMMENT ON TABLE readcheck IS '읽은 메세지확인';
+
+COMMENT ON COLUMN readcheck.room_num IS '방번호';
+
+COMMENT ON COLUMN readcheck.msg_num IS '메세지번호';
+
+COMMENT ON COLUMN readcheck.user_id IS '아이디';
+
+COMMENT ON COLUMN readcheck.read IS '읽은여부';
+
+/* 메세지 */
+CREATE TABLE message (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   msg_num NUMBER(4) NOT NULL, /* 메세지번호 */
+   msg_type NUMBER(1), /* 메세지타입 */
+   send_user_id VARCHAR2(20 BYTE), /* 보내는사람 */
+   content VARCHAR2(1000 BYTE), /* 내용 */
+   msg_time DATE, /* 메세지보낸시간 */
+   msg_file VARCHAR2(200 BYTE), /* 첨부파일명 */
+   msg_pic VARCHAR2(200 BYTE) /* 사진파일명 */
+);
+
+CREATE UNIQUE INDEX PK_message2
+   ON message (
+      room_num ASC,
+      msg_num ASC
+   );
+
+ALTER TABLE message
+   ADD
+      CONSTRAINT PK_message2
+      PRIMARY KEY (
+         room_num,
+         msg_num
+      );
+
+COMMENT ON TABLE message IS '메세지';
+
+COMMENT ON COLUMN message.room_num IS '방번호';
+
+COMMENT ON COLUMN message.msg_num IS '메세지번호';
+
+COMMENT ON COLUMN message.msg_type IS '메세지타입';
+
+COMMENT ON COLUMN message.send_user_id IS '보내는사람';
+
+COMMENT ON COLUMN message.content IS '내용';
+
+COMMENT ON COLUMN message.msg_time IS '메세지보낸시간';
+
+COMMENT ON COLUMN message.msg_file IS '첨부파일명';
+
+COMMENT ON COLUMN message.msg_pic IS '사진파일명';
+
+/* 채팅방 */
+CREATE TABLE chatting (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   room_name VARCHAR2(30 BYTE), /* 방제목 */
+   room_type NUMBER(1) /* 방종류 */
+);
+
+CREATE UNIQUE INDEX PK_chatting
+   ON chatting (
+      room_num ASC
+   );
+
+ALTER TABLE chatting
+   ADD
+      CONSTRAINT PK_chatting
+      PRIMARY KEY (
+         room_num
+      );
+
+COMMENT ON TABLE chatting IS '채팅방';
+
+COMMENT ON COLUMN chatting.room_num IS '방번호';
+
+COMMENT ON COLUMN chatting.room_name IS '방제목';
+
+COMMENT ON COLUMN chatting.room_type IS '방종류';
+
+/* 장바구니기본정보 */
+CREATE TABLE main_basket (
+   basket_num NUMBER(20) NOT NULL, /* 장바구니번호 */
+   user_id VARCHAR2(20) NOT NULL, /* 구매자번호 */
+   basket_date DATE NOT NULL /* 장바구니최초 생성 시간 */
+);
+
+CREATE UNIQUE INDEX PK_main_basket
+   ON main_basket (
+      basket_num ASC
+   );
+
+ALTER TABLE main_basket
+   ADD
+      CONSTRAINT PK_main_basket
+      PRIMARY KEY (
+         basket_num
+      );
+
+COMMENT ON TABLE main_basket IS '장바구니기본정보';
+
+COMMENT ON COLUMN main_basket.basket_num IS '장바구니번호';
+
+COMMENT ON COLUMN main_basket.user_id IS '구매자번호';
+
+COMMENT ON COLUMN main_basket.basket_date IS '장바구니최초 생성 시간';
+
+/* 장바구니 */
+CREATE TABLE basket (
+   basket_num NUMBER(20) NOT NULL, /* 장바구니번호 */
+   pro_num NUMBER(5) NOT NULL, /* 상품판매번호 */
+   basket_amount NUMBER(20) NOT NULL, /* 장바구니담긴개수 */
+   basket_date DATE NOT NULL /* 장바구니담긴시간 */
+);
+
+CREATE UNIQUE INDEX PK_basket
+   ON basket (
+      basket_num ASC,
+      pro_num ASC
+   );
+
+ALTER TABLE basket
+   ADD
+      CONSTRAINT PK_basket
+      PRIMARY KEY (
+         basket_num,
+         pro_num
+      );
+
+COMMENT ON TABLE basket IS '장바구니';
+
+COMMENT ON COLUMN basket.basket_num IS '장바구니번호';
+
+COMMENT ON COLUMN basket.pro_num IS '상품판매번호';
+
+COMMENT ON COLUMN basket.basket_amount IS '장바구니담긴개수';
+
+COMMENT ON COLUMN basket.basket_date IS '장바구니담긴시간';
+
+/* 결제(주문) */
+CREATE TABLE payment (
+   pay_tot_num NUMBER(20) NOT NULL, /* 총결제번호 */
+   pay_tot NUMBER(20) NOT NULL, /* 총결제 금액 */
+   user_id VARCHAR2(20) NOT NULL, /* 구매자아이디 */
+   pay_state NUMBER NOT NULL, /* 결제상태 */
+   pay_name VARCHAR2(20) NOT NULL, /* 수취인 */
+   pay_address VARCHAR2(255) NOT NULL, /* 배송지 */
+   pay_tell VARCHAR2(30) NOT NULL, /* 수취인전화번호 */
+   cp_state NUMBER(1), /* 쿠폰사용상태 */
+   cp_num NUMBER, /* 쿠폰번호 */
+   pay_req VARCHAR2(200), /* 요청사항 */
+   pay_date DATE NOT NULL /* 결제일자 */
+);
+
+CREATE UNIQUE INDEX PK_payment
+   ON payment (
+      pay_tot_num ASC
+   );
+
+ALTER TABLE payment
+   ADD
+      CONSTRAINT PK_payment
+      PRIMARY KEY (
+         pay_tot_num
+      );
+
+COMMENT ON TABLE payment IS '결제(주문)';
+
+COMMENT ON COLUMN payment.pay_tot_num IS '총결제번호';
+
+COMMENT ON COLUMN payment.pay_tot IS '총결제 금액';
+
+COMMENT ON COLUMN payment.user_id IS '구매자아이디';
+
+COMMENT ON COLUMN payment.pay_state IS '결제상태';
+
+COMMENT ON COLUMN payment.pay_name IS '수취인';
+
+COMMENT ON COLUMN payment.pay_address IS '배송지';
+
+COMMENT ON COLUMN payment.pay_tell IS '수취인전화번호';
+
+COMMENT ON COLUMN payment.cp_state IS '쿠폰사용상태';
+
+COMMENT ON COLUMN payment.cp_num IS '쿠폰번호';
+
+COMMENT ON COLUMN payment.pay_req IS '요청사항';
+
+COMMENT ON COLUMN payment.pay_date IS '결제일자';
+
+/* 후기테이블 */
+CREATE TABLE review (
+   user_id VARCHAR2(20) NOT NULL, /* 아이디 */
+   pro_num NUMBER(5) NOT NULL, /* 상품판매번호  */
+   re_title VARCHAR2(200) NOT NULL, /* 후기제목 */
+   re_content CLOB NOT NULL, /* 후기내용 */
+   re_pic VARCHAR2(1000), /* 후기사진경로이름 */
+   re_star NUMBER(1) NOT NULL /* 별점 */
+);
+
+CREATE UNIQUE INDEX PK_review
+   ON review (
+      user_id ASC,
+      pro_num ASC
+   );
+
+ALTER TABLE review
+   ADD
+      CONSTRAINT PK_review
+      PRIMARY KEY (
+         user_id,
+         pro_num
+      );
+
+COMMENT ON TABLE review IS '후기테이블';
+
+COMMENT ON COLUMN review.user_id IS '아이디';
+
+COMMENT ON COLUMN review.pro_num IS '상품판매번호 ';
+
+COMMENT ON COLUMN review.re_title IS '후기제목';
+
+COMMENT ON COLUMN review.re_content IS '후기내용';
+
+COMMENT ON COLUMN review.re_pic IS '후기사진경로이름';
+
+COMMENT ON COLUMN review.re_star IS '별점';
+
+ALTER TABLE check_product
+   ADD
+      CONSTRAINT FK_product_TO_check_product
+      FOREIGN KEY (
+         pro_num
+      )
+      REFERENCES product (
+         pro_num
+      );
+
+ALTER TABLE product
+   ADD
+      CONSTRAINT FK_member_TO_product
+      FOREIGN KEY (
+         user_id
+      )
+      REFERENCES member (
+         user_id
+      );
+
+ALTER TABLE MyPage
+   ADD
+      CONSTRAINT FK_product_TO_MyPage
+      FOREIGN KEY (
+         pro_num
+      )
+      REFERENCES product (
+         pro_num
+      );
+
+ALTER TABLE MyPage
+   ADD
+      CONSTRAINT FK_payment_TO_MyPage
+      FOREIGN KEY (
+         pay_tot_num
+      )
+      REFERENCES payment (
+         pay_tot_num
+      );
+
+ALTER TABLE banner
+   ADD
+      CONSTRAINT FK_board_TO_banner
+      FOREIGN KEY (
+         board_num
+      )
+      REFERENCES board (
+         board_num
+      );
+
+ALTER TABLE participant
+   ADD
+      CONSTRAINT FK_chatting_TO_participant
+      FOREIGN KEY (
+         room_num
+      )
+      REFERENCES chatting (
+         room_num
+      );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT FK_message_TO_readcheck
+      FOREIGN KEY (
+         room_num,
+         msg_num
+      )
+      REFERENCES message (
+         room_num,
+         msg_num
+      );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT FK_participant_TO_readcheck
+      FOREIGN KEY (
+         room_num,
+         user_id
+      )
+      REFERENCES participant (
+         room_num,
+         user_id
+      );
+
+ALTER TABLE message
+   ADD
+      CONSTRAINT FK_chatting_TO_message
+      FOREIGN KEY (
+         room_num
+      )
+      REFERENCES chatting (
+         room_num
+      );
+
+ALTER TABLE basket
+   ADD
+      CONSTRAINT FK_main_basket_TO_basket
+      FOREIGN KEY (
+         basket_num
+      )
+      REFERENCES main_basket (
+         basket_num
+      );
+
+ALTER TABLE review
+   ADD
+      CONSTRAINT FK_product_TO_review
+      FOREIGN KEY (
+         pro_num
+      )
+      REFERENCES product (
+         pro_num
+      );
+drop table readcheck;
+drop table message;
+drop table participant;
+drop table chatting ;
+
+CREATE TABLE readcheck (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   msg_num NUMBER(4) NOT NULL, /* 메세지번호 */
+   user_id VARCHAR2(20 BYTE) NOT NULL, /* 아이디 */
+   read NUMBER(2) /* 읽은여부 */
+);
+
+CREATE UNIQUE INDEX PK_readcheck
+   ON readcheck (
+      room_num ASC,
+      msg_num ASC,
+      user_id ASC
+   );
+
+COMMENT ON TABLE readcheck IS '읽은 메세지확인';
+
+COMMENT ON COLUMN readcheck.room_num IS '방번호';
+
+COMMENT ON COLUMN readcheck.msg_num IS '메세지번호';
+
+COMMENT ON COLUMN readcheck.user_id IS '아이디';
+
+COMMENT ON COLUMN readcheck.read IS '읽은여부';
+
+
+
+/* 메세지 */
+CREATE TABLE message (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   msg_num NUMBER(4) NOT NULL, /* 메세지번호 */
+   msg_type NUMBER(1), /* 메세지타입 */
+   send_user_id VARCHAR2(20 BYTE), /* 보내는사람 */
+   content VARCHAR2(1000 BYTE), /* 내용 */
+   msg_time DATE, /* 메세지보낸시간 */
+   msg_file VARCHAR2(200 BYTE), /* 첨부파일명 */
+   msg_pic VARCHAR2(200 BYTE) /* 사진파일명 */
+);
+
+CREATE UNIQUE INDEX PK_message
+   ON message (
+      room_num ASC,
+      msg_num ASC
+   );
+
+
+
+COMMENT ON TABLE message IS '메세지';
+
+COMMENT ON COLUMN message.room_num IS '방번호';
+
+COMMENT ON COLUMN message.msg_num IS '메세지번호';
+
+COMMENT ON COLUMN message.msg_type IS '메세지타입';
+
+COMMENT ON COLUMN message.send_user_id IS '보내는사람';
+
+COMMENT ON COLUMN message.content IS '내용';
+
+COMMENT ON COLUMN message.msg_time IS '메세지보낸시간';
+
+COMMENT ON COLUMN message.msg_file IS '첨부파일명';
+
+COMMENT ON COLUMN message.msg_pic IS '사진파일명';
+
+
+/* 참여자 */
+CREATE TABLE participant (
+   room_num NUMBER(3) NOT NULL, /* 방번호 */
+   user_id VARCHAR2(20 BYTE) NOT NULL /* 아이디 */
+);
+
+CREATE UNIQUE INDEX PK_participant
+   ON participant (
+      room_num ASC,
+      user_id ASC
+   );
+COMMENT ON TABLE participant IS '참여자';
+
+COMMENT ON COLUMN participant.room_num IS '방번호';
+
+COMMENT ON COLUMN participant.user_id IS '아이디';
+
+
+
+
+  CREATE TABLE "S20220604"."CHATTING" 
+   (   "ROOM_NUM" NUMBER(3,0) NOT NULL ENABLE, 
+   "ROOM_NAME" VARCHAR2(30 BYTE), 
+   "ROOM_TYPE" NUMBER(1,0), 
+   "ROOM_PAWD" VARCHAR2(20 BYTE), 
+   "PIC_CHANGE" VARCHAR2(100 BYTE), 
+    CONSTRAINT "PK_CHATTING" PRIMARY KEY ("ROOM_NUM")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM"  ENABLE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+
+   COMMENT ON COLUMN "S20220604"."CHATTING"."ROOM_NUM" IS '방번호';
+   COMMENT ON COLUMN "S20220604"."CHATTING"."ROOM_NAME" IS '방제목';
+   COMMENT ON COLUMN "S20220604"."CHATTING"."ROOM_TYPE" IS '방종류';
+   COMMENT ON COLUMN "S20220604"."CHATTING"."ROOM_PAWD" IS '방비밀번호';
+   COMMENT ON TABLE "S20220604"."CHATTING"  IS '채팅방';
+
+
+
+
+
+ALTER TABLE message
+   ADD
+      CONSTRAINT PK_message2
+      PRIMARY KEY (
+         room_num,
+         msg_num
+      );
+
+ALTER TABLE message
+   ADD
+      CONSTRAINT FK_chatting_TO_message
+      FOREIGN KEY (
+         room_num
+      )
+      REFERENCES chatting (
+         room_num
+      );
+
+ALTER TABLE participant
+   ADD
+      CONSTRAINT PK_participant
+      PRIMARY KEY (
+         room_num,
+         user_id
+      );
+
+ALTER TABLE participant
+   ADD
+      CONSTRAINT FK_chatting_TO_participant
+      FOREIGN KEY (
+         room_num
+      )
+      REFERENCES chatting (
+         room_num
+      );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT PK_readcheck
+      PRIMARY KEY (
+         room_num,
+         msg_num,
+         user_id
+      );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT FK_message_TO_readcheck
+      FOREIGN KEY (
+         room_num,
+         msg_num
+      )
+      REFERENCES message (
+         room_num,
+         msg_num
+      );
+
+ALTER TABLE readcheck
+   ADD
+      CONSTRAINT FK_participant_TO_readcheck
+      FOREIGN KEY (
+         room_num,
+         user_id
+      )
+      REFERENCES participant (
+         room_num,
+         user_id
+      );
+DROP SEQUENCE  SEQ_MESSAGE_NUM;
+CREATE SEQUENCE  "S20220604"."SEQ_MESSAGE_NUM"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;
+DROP SEQUENCE SEQ_CHATROOM_NUM;
+CREATE SEQUENCE  "S20220604"."SEQ_CHATROOM_NUM"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;

@@ -1,0 +1,129 @@
+create or replace PROCEDURE chat_to_consumer
+(
+    p_con_user_id    in product.user_id%TYPE,       -- 입력받아온 리뷰올린 user_id    
+    p_user_id        in message.send_user_id%TYPE,   -- 입력받아온 로그인유저 id
+    out_room_num     out chatting.room_num%TYPE
+) 
+IS
+    vn_cnt           NUMBER    :=0;             -- 리뷰쓴 id 기준으로 참여자 목록에 user_id 가 있는가 검증한 결과
+    vn_rog_cnt       NUMBER    :=0;             -- 위의 값이 0보다 클때 로그인 유저와 리뷰유저 두명다 들어가있는방 중에 타입이 1인 방갯수 조회
+    vn_first_cnt     NUMBER     :=0;
+    vn_room_num      message.room_num%type; 
+    vn_msg_num       message.msg_num%type;  
+
+BEGIN
+                        
+    select  count(*)  -- 리뷰쓴 id 기준으로 참여자 테이블에 user_id 가 있는가 검증한 결과 - 0이면 없고 0보다크면 있고(1번조건)
+    into    vn_cnt
+    from    participant
+    where   user_id = p_con_user_id;
+
+    -- 위의 값이 0보다 클때 
+    -- 로그인 유저와 리뷰유저 두명다 들어가있는방 중에 타입이 1인 방갯수 조회
+    select  count(p.room_num)
+    into    vn_rog_cnt
+    from    participant p , chatting c
+    where   p.room_num = c.room_num
+    and     p.room_num in ( select room_num
+                            from participant 
+                            where user_id = p_con_user_id)
+    and     user_id = p_user_id   
+    and     c.room_type = 1;      
+    
+    -- 로그인 유저가 참여자 테이블에있는지 없는지 조회 없어서 처음이라면 채팅 테이블에 시퀀스로 값이 입력
+    select  count(*)
+    into    vn_first_cnt
+    from    participant
+    where   user_id = p_user_id;
+
+     -- 로그인 유저가 참여자 테이블에있는지 없는지 조회 없어서 처음이라면 채팅 테이블에 시퀀스로 값이 입력
+        IF vn_first_cnt = 0 THEN 
+            insert into chatting
+            values(
+                    (SELECT MAX(room_num)+1 FROM CHATTING),
+                    '톡톡대화',
+                    1, '', 'defaultChatImg.png');
+                    
+            INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_user_id);      
+    
+           INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_con_user_id);           
+            
+            INSERT INTO MESSAGE 
+            VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                       1, 2, p_user_id,
+                       '안녕하세요',
+                      SYSDATE ,'', '');    
+    
+    
+        ELSIF vn_cnt = 0 THEN
+    
+            INSERT INTO CHATTING 
+            values( 
+                     (SELECT MAX(room_num)+1 FROM CHATTING), 
+                     '톡톡대화', 
+                    1, '', 'defaultChatImg.png'  );
+            -- p_pro_user_id << 원래 문의 대신 이거였음
+            INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_user_id);      
+    
+           INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_con_user_id);           
+    
+            INSERT INTO MESSAGE 
+            VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                       1, 2, p_user_id,
+                       '안녕하세요',
+                      SYSDATE ,'', ''); 
+    
+            
+     ELSIF  vn_cnt > 0 then
+          -- 위의 값이 0보다 클때 
+          -- 로그인 유저와 리뷰유저 두명다 들어가있는방 중에 타입이 1인 방갯수 조회
+            IF  vn_rog_cnt = 0 then
+    
+                INSERT INTO CHATTING 
+                values( 
+                          (SELECT MAX(room_num)+1 FROM CHATTING), 
+                         '톡톡대화', 
+                        1, '', 'defaultChatImg.png'  );
+    
+                 INSERT INTO PARTICIPANT 
+                 values( 
+                        (SELECT MAX(room_num) FROM CHATTING),
+                          p_user_id);      
+    
+                   INSERT INTO PARTICIPANT 
+                    values( 
+                            (SELECT MAX(room_num) FROM CHATTING),
+                              p_con_user_id);           
+    
+                    INSERT INTO MESSAGE 
+                    VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                               1, 2, p_user_id,
+                               '안녕하세요',
+                              SYSDATE ,'', ''); 
+                              
+          
+    
+        END IF;
+           
+     END IF;
+    commit;
+    
+    select  max(room_num)
+    into    out_room_num
+    from    chatting;
+    
+     --결과값 출력
+    DBMS_OUTPUT.PUT_LINE('방번호 : ' || out_room_num);
+END;

@@ -1,0 +1,343 @@
+--회원정보  pk : user_id
+
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('admin','1','이승관','sajomarket@gmail.com','010-8989-8989','default_profile1.png','서울특별시 마포구 대흥동 12-20','305호',null,null,null,null,null,null,'0',to_date('22/05/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('namwoo','1','고남우','namwoo@gmail.com','010-9999-7777','default_profile2.png','경기도 고양시 일산동구 백석동','남정시티프라자3차',null,null,null,null,null,null,'1',to_date('22/05/28','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('sdsa12','1','이건혜','sdsa12@gmail.com','010-6666-8877','default_profile3.png','경기도 김포시 양촌읍','양곡리',null,null,null,null,null,null,'1',to_date('22/05/28','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('running225','1','주석임','running225@naver.com','010-5555-4444','default_profile4.png','서울특별시 강남구 역삼동','삼원타워',null,null,null,null,null,null,'1',to_date('22/05/29','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('junghyun9','1','현정연','junghyun9@naver.com','010-4444-3333','default_profile5.png','강원도 강릉시 초당동','초당순두부길95-5',null,null,null,null,null,null,'1',to_date('22/05/27','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('min2523','1','성민서','min2523@naver.com','010-3333-2222','default_profile6.png','서울특별시 상암동'',''월드컵북로','월드컵북로','당근사조','010-3333-2255','default_profile5.png','111-22-33333','서울특별시강남구','학동로 426','2',to_date('22/05/27','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('jny1925','1','장남영','jny1925@naver.com','010-2222-1111','default_profile7.png','제주특별자치도 제주시','오일장서길26','무파라','010-2222-1166','default_profile4.png','222-22-33333','제주특별자치도 제주시','오일장서길26','2',to_date('22/05/28','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('mym339','1','민영미','mym339@naver.com','010-1111-9999','default_profile1.png','전라남도 광주광역시','내방로111','푸룻푸룻','010-1111-9977','default_profile3.png','333-22-33333','경기도 성남시','성남대로 997','2',to_date('22/05/28','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('sw7922','1','안혜영','sw7922@gmail.com','010-8888-7777','default_profile2.png','대구광역시 중구 삼덕동','달구벌대로','고소미','010-8888-7788','default_profile2.png','444-22-33333','충청남도 천안시','천안대로 1347','2',to_date('22/05/28','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('lover27','1','김시진','lover27@gmail.com','010-7777-6666','default_profile3.png','부산광역시 해운대구','해운대해변로140','아삭청과','010-7777-6699','default_profile1.png','555-22-33333','경기도 파주시','새꽃로 13','2',to_date('22/05/31','RR/MM/DD'),null,null,'1');
+
+DROP SEQUENCE SEQ_CP_NUM;
+DROP SEQUENCE SEQ_BOARD_NUM; 
+DROP SEQUENCE SEQ_FAQ_NUM;
+DROP SEQUENCE SEQ_BANNER_NUM;
+
+-- 쿠폰 시퀀스(관리자만)
+CREATE SEQUENCE SEQ_CP_NUM INCREMENT BY 1 START WITH 1000;
+-- 공지 시퀀스
+CREATE SEQUENCE SEQ_BOARD_NUM INCREMENT BY 1;
+-- 문의 시퀀스
+CREATE SEQUENCE SEQ_FAQ_NUM INCREMENT BY 1 START WITH 10000;
+-- 배너 시퀀스
+CREATE SEQUENCE SEQ_BANNER_NUM INCREMENT BY 1;
+
+
+-- 쿠폰 테이블
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '6월 감사 1000원 쿠폰',   2, 1000, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-15', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '6월 마지막 1000원 쿠폰', 2, 1000, to_date('2022-06-20', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '6월 마지막 3000원 쿠폰', 2, 3000, to_date('2022-06-20', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '6월 신규 고객 10000원 할인 쿠폰', 2, 10000, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '이거사조가 쏜다 5000원 쿠폰', 2, 5000, to_date('2022-06-15', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '6월 무료배송 쿠폰', 1, 2500, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '배송비 무료', 1, 2500, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '이거사조 할인쿠폰', 2, 5000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '여름맞이 1000원 할인', 2, 1000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '여름맞이 3000원 할인', 2, 3000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, '배송비 대신 내드립니다', 1, 2500, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, 'Hello July 3000원 할인', 2, 3000, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('admin', SEQ_CP_NUM.NEXTVAL, 'Hello July 무료배송', 1, 2500, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+
+insert into s20220604.coupon VALUES('namwoo', 1000, '6월 감사 1000원 쿠폰',   2, 1000, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-15', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('namwoo', 1002, '6월 마지막 3000원 쿠폰', 2, 3000, to_date('2022-06-20', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('namwoo', 1005, '6월 무료배송 쿠폰', 1, 2500, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('sdsa12', 1003, '6월 신규 고객 10000원 할인 쿠폰', 2, 10000, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('sdsa12', 1006, '배송비 무료', 1, 2500, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('min2523', 1004, '이거사조가 쏜다 5000원 쿠폰', 2, 5000, to_date('2022-06-15', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('min2523', 1005, '6월 무료배송 쿠폰', 1, 2500, to_date('2022-06-01', 'yyyy-mm-dd'), to_date('2022-06-30', 'yyyy-mm-dd'), 1);
+insert into s20220604.coupon VALUES('namwoo', 1008, '여름맞이 1000원 할인', 2, 1000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('namwoo', 1009, '여름맞이 3000원 할인', 2, 3000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('namwoo', 1010, '배송비 대신 내드립니다', 1, 2500, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('sdsa12', 1011, 'Hello July 3000원 할인', 2, 3000, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('sdsa12', 1012, 'Hello July 무료배송', 1, 2500, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('sdsa12', 1008, '여름맞이 1000원 할인', 2, 1000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('sdsa12', 1009, '여름맞이 3000원 할인', 2, 3000, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('min2523', 1010, '배송비 대신 내드립니다', 1, 2500, to_date('2022-06-10', 'yyyy-mm-dd'), to_date('2022-07-10', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('min2523', 1011, 'Hello July 3000원 할인', 2, 3000, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+insert into s20220604.coupon VALUES('min2523', 1012, 'Hello July 무료배송', 1, 2500, to_date('2022-07-01', 'yyyy-mm-dd'), to_date('2022-07-31', 'yyyy-mm-dd'), 0);
+
+
+-- 공지 테이블 (유형 1: 공지, 2: 일반)
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 1, 'Market sajo 이용안내', '안녕하세요. 이거사조 입니다. '||CHR(10)||CHR(13)||'이거사조는 최소한의 유통구조를 만들어 합리적인 가격의 좋은 제품을 고객분들께 제공하고 있습니다.'||CHR(10)||CHR(13)||'많은 이용 부탁드립니다.','admin', to_date('2021-10-10', 'yyyy-mm-dd') , 223);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[MD PICK5] 김장준비는 이거사조', '배추, 오이, 양파, 생강, 마늘 김장준비는 이거사조에서 하세요.'||CHR(10)||CHR(13)||'신선한 재료에서 깊은 맛이 나옵니다.','admin', to_date('2021-12-01', 'yyyy-mm-dd') , 112);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '새해복많이받으세요', '이거사조를 이용해주시는 고객 여러분 새해 복 많이 받으시고, 건강하세요', 'admin', to_date('2022-01-01', 'yyyy-mm-dd') , 52);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[가격인상공지] 딸기 외 2종', '딸기가 3월부터 100원씩 가격 인상됩니다.'||CHR(10)||CHR(13)||' 최대한 합리적인 가격을 위해 늘 노력하는 이거사조가 되겠습니다.', 'admin', to_date('2022-01-03', 'yyyy-mm-dd') , 108);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '이거사조와 함께 코로나 극복', '이거사조에서 준비한 신선한 식품들로 면역력을 높여요.'||CHR(10)||CHR(13)||'다함께 아자아자 코로나 극복합시다.','admin', to_date('2022-03-20', 'yyyy-mm-dd') , 74);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[MD PICK5] 4월 수입과일', '4월 수입과일 체리를 대폭 할인 합니다. 많이 구매해주세요','admin', to_date('2022-04-01', 'yyyy-mm-dd') , 142);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[MD PICK5] 5월 제철 과일', '5월 제철 과일 딸기 참외 망고 바나나 파격할인합니다.','admin', to_date('2022-05-01', 'yyyy-mm-dd') , 102);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '이거사조 소비자부분 고객만족평가 1위', '이거사조가 중앙정보처리학원에서 실시하는 고객만족평가에서 소비자 부분 1등을 수여하였습니다.'||CHR(10)||CHR(13)||' 고객분들의 많은 관심과 사랑에 늘 감사드립니다.','admin', to_date('2022-05-11', 'yyyy-mm-dd') , 74);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 1, '이거사조 6월 배송 휴무일 안내', '안녕하세요. 이거사조입니다.'||CHR(10)||CHR(13)||'6월 공휴일로 인한 총알 배송 및 일반 배송 휴무일을 안내드립니다. '||CHR(10)||CHR(13)||'택배사 휴무일 6월 1일(수) 지방선거 '||CHR(10)||CHR(13)||'6월 6일 (월) 현충일'||CHR(10)||CHR(13)||'그럼 이거사조와 함께 따뜻하고 편안한 6월 보내시길 바랍니다.', 'admin', to_date('2022-05-28', 'yyyy-mm-dd') , 100);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '관리자 1:1 채팅', '6월부터 이거사조 관리자와 1:1 채팅이 가능합니다. '||CHR(10)||CHR(13)||'이용 중 불편사항이 있으시다면 언제나 문의부탁드립니다.'||CHR(10)||CHR(13)||' 바로 답변 가능시간은 9:00 - 18:00 입니다. '||CHR(10)||CHR(13)||'시간외 문의사항도 확인 후 최대한 빠른 시일내 답변드리도록 하겠습니다.', 'admin', to_date('2022-05-28', 'yyyy-mm-dd') , 19);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[가격인상공지] 브로콜리 외 2종', '브로콜리, 당근, 토마토가 6월부터 100원씩 가격 인상됩니다.'||CHR(10)||CHR(13)||' 최대한 합리적인 가격을 위해 늘 노력하는 이거사조가 되겠습니다.', 'admin', to_date('2022-05-29', 'yyyy-mm-dd') , 28);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '6/1 홈페이지 점검', '안녕하세요. 이거사조입니다.'||CHR(10)||CHR(13)||' 홈페이지 시스템 점검으로 인해 6월 1일 03:00-06:00 동안 홈페이지 이용이 불가합니다. '||CHR(10)||CHR(13)||'보다 나은 서비스를 위하여 늘 노력하겠습니다.', 'admin', to_date('2022-05-29', 'yyyy-mm-dd') , 105);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[가격인상공지] 포도 외 5종', '복숭아, 포도, 사과, 딸기, 참외가 6월부터 1000원씩 가격 인상됩니다. '||CHR(10)||CHR(13)||'최대한 합리적인 가격을 위해 늘 노력하는 이거사조가 되겠습니다.', 'admin',to_date('2022-05-30', 'yyyy-mm-dd') , 33);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 1, '개인정보 처리방침 일부 변경에 관한 안내', '안녕하세요. 이거사조입니다. '||CHR(10)||CHR(13)||'개인정보 처리방침의 내용을 일부 변경하게 되어 안내드립니다. '||CHR(10)||CHR(13)||'*변경사항*'||CHR(10)||CHR(13)||' 제4조 [개인정보 자동수집 장치의 설치, 운영 및 거부], 제 6조 [개인정보 제3자 제공]', 'admin', to_date('2022-05-30', 'yyyy-mm-dd') , 100);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 1, '6월 첫 구매고객 이벤트', '안녕하세요. 이거사조입니다. '||CHR(10)||CHR(13)||'6월 신규 고객분들께는 구매금액 상관없이 10000원 할인 쿠폰을 제공해드립니다. '||CHR(10)||CHR(13)||'많은 이용부탁드립니다. 감사합니다.', 'admin', to_date('2022-05-30', 'yyyy-mm-dd') , 89);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 1, '채팅 이용 안내', '채팅이용안내 고운말 바른말을 사용합시다.'||CHR(10)||CHR(13)||' 다양한 소통은 언제나 환영입니다. '||CHR(10)||CHR(13)||'궁금한건 언제든지 물어보세요', 'admin', to_date('2022-05-30', 'yyyy-mm-dd') , 89);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '수입과일 배송지연', '코로나 영향으로 동남아 지역에서 수입하는 과일의 배송이 다소 지연됩니다. '||CHR(10)||CHR(13)||'망고, 바나나 등 수입 과일 구매시 배송일 부분 확인 부탁드립니다.', 'admin', to_date('2022-06-01', 'yyyy-mm-dd') , 56);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[MD PICK5] 6월 제철 과일', '6월은 복숭아의 계절입니다.'||CHR(10)||CHR(13)||' 당신은 딱복? 말복? 이거사조에는 모두 다 있다. '||CHR(10)||CHR(13)||'원하는 복숭아 사서 드세요','admin', to_date('2022-06-05', 'yyyy-mm-dd') , 74);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '좋은말 사용 캠패인', '채팅시 일부 이용자분들의 다소 거친 언행으로 많은 이용자분들께서 이용에 어려움을 나타내고 있습니다.'||CHR(10)||CHR(13)||' 늘 아름다운 말을 사용하는 우리 이거사조 고객분들이 되시기를 희망합니다.'||CHR(10)||CHR(13)||' 지속적인 폭언시 강제 회원 정지 됨을 안내드립니다.', 'admin', to_date('2022-06-11', 'yyyy-mm-dd') , 59);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '이거사조 week 럭키 기프트 당첨 안내', '10만원 이상 구매하신 고객분들을 대상으로 진행한 week 럭키 기프트 당첨 안내드립니다. '||CHR(10)||CHR(13)||'namwoo 회원님~ 10만원 백화점 상품권 당첨을 축하드립니다. '||CHR(10)||CHR(13)||'상품권 지급 관련사항은 별도 안내드리겠습니다', 'admin', to_date('2022-06-12', 'yyyy-mm-dd') , 09);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '[MD PICK] 매실의 계절', '여름은 매실의 계절입니다. '||CHR(10)||CHR(13)||'이거사조에서 품질 좋은 매실을 준비했습니다.'||CHR(10)||CHR(13)||'다양하게 활용할수있는 매실 많이 많이 사서 시원한 여름 보내세요','admin', to_date('2022-06-20', 'yyyy-mm-dd') , 74);
+insert into s20220604.board VALUES(SEQ_BOARD_NUM.nextval, 2, '신선한 과일 고르는 방법', '신선한 과일 고르는 팁'||CHR(10)||CHR(13)||'꼭지가 신선한 것 고르기'||CHR(10)||CHR(13)||'무늬가 선명한 것 고르기','admin', to_date('2022-06-20', 'yyyy-mm-dd') , 74);
+
+-- 문의(1.회원정보, 2.신고 3. 기타) 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9986, 1, '주소변경', '이사갔어요', 'mijeong22', to_date('2022-06-02', 'yyyy-mm-dd'), 'admin', 'mijeong22회원님 주소변경 완료하였습니다. 확인부탁드립니다.', to_date('2022-06-02', 'yyyy-mm-dd'), 1, 1); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, faq_phone, faq_email, faq_pass, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9987, 1, '개인정보인증오류', '뭐가 잘못된건지 개인정보 인증이 자꾸 실패해요. 비번알려주세요', '염창희', '010-3333-3333','meanjeong92@naver.com', 1, to_date('2022-06-02', 'yyyy-mm-dd'), 'admin', '비밀번호 1111로 초기화해드렸습니다.', to_date('2022-06-02', 'yyyy-mm-dd'), 1, 0); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9988, 2, '판매자관련문의', '채팅으로 자꾸 스팸 보냅니다. 회원 정지 부탁드려요', 'namwoo', to_date('2022-06-03', 'yyyy-mm-dd'), 'admin', '고남우회원님 말씀하신 내용은 회사 내부적으로 검토하여 사실이 확인되면 min2523님 1개월간 이용정지 조치하도록하겠습니다.', to_date('2022-06-03', 'yyyy-mm-dd'), 1, 1);
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9989, 1, '아이디를 바꿀수는 없나요', '아이디 변경은 불가한가요?', 'sdsa12', to_date('2022-06-04', 'yyyy-mm-dd'), 'admin', '이건혜 회원님. 죄송하지만 아이디 변경은 불가합니다. 이외 다른 정보 변경은 가능합니다.', to_date('2022-06-04', 'yyyy-mm-dd'), 1, 1); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9990, 1, '주소변경', '주소변경부탁드려요', 'namwoo', to_date('2022-06-04', 'yyyy-mm-dd'), 'admin', '고남우회원님 주소변경 완료하였습니다. 확인부탁드립니다.', to_date('2022-06-04', 'yyyy-mm-dd'), 1, 1); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, faq_phone, faq_email, faq_pass, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9991, 1, '비번을 몰라요', '뭐가 잘못된건지 개인정보 인증이 자꾸 실패해요. 비번알려주세요', '염창희', '010-3333-3333','meanjeong92@naver.com', 1, to_date('2022-06-04', 'yyyy-mm-dd'), 'admin', '비밀번호 1111로 초기화해드렸습니다.', to_date('2022-06-04', 'yyyy-mm-dd'), 1, 0); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9992, 2, 'min2523 회원 신고해요', '채팅으로 자꾸 스팸 보냅니다. 회원 정지 부탁드려요', 'namwoo', to_date('2022-06-04', 'yyyy-mm-dd'), 'admin', '고남우회원님 말씀하신 내용은 회사 내부적으로 검토하여 사실이 확인되면 min2523님 1개월간 이용정지 조치하도록하겠습니다.', to_date('2022-06-04', 'yyyy-mm-dd'), 1, 1);
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, admin_id, admin_content, admin_date, faq_check, login_check) VALUES (9993, 1, '프로필변경', '프로필 변경은 불가한가요?', 'sdsa12', to_date('2022-06-04', 'yyyy-mm-dd'), 'admin', '이건혜 회원님. 프로필 변경은 마이페이지에서 가능합니다', to_date('2022-06-04', 'yyyy-mm-dd'), 1, 1); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, faq_phone, faq_email, faq_pass, user_date, faq_check, login_check) VALUES (9994, 1, '비번을 못찾겠어요', '핸드폰 인증이 어려워서 비번을 못찾겠어요', '구자경', '010-1111-1111','meanjeong92@naver.com', 1, to_date('2022-06-05', 'yyyy-mm-dd'), 0, 0); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, faq_phone, faq_email, faq_pass, user_date, faq_check, login_check) VALUES (9995, 1, '비번 알려주세요', '뭐가 잘못된건지 개인정보 인증이 자꾸 실패해요. 비번알려주세요', '염미정', '010-1111-1111','meanjeong92@naver.com', 1, to_date('2022-06-06', 'yyyy-mm-dd'), 0, 0);
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, faq_check, login_check) VALUES (9996, 2, '신고합니다.', 'lover27 회원님 채팅 중 욕설사용으로 신고합니다. 회원정지부탁드려요', 'namwoo', to_date('2022-06-12', 'yyyy-mm-dd'), 0, 1);
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, faq_phone, faq_email, faq_pass, user_date, faq_check, login_check) VALUES (9997, 3, '외국인도 회원가입 가능한가요', '외국인도 사이트 이용가능한가요', '윌리엄', '010-2222-2222','meanjeong92@naver.com', 1, to_date('2022-06-12', 'yyyy-mm-dd'), 0, 0); 
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, faq_check, login_check) VALUES (9998, 3, '배송문의', '사과 6월 15일에 주문했는데 아직도 안왔어요', 'sdsa12', to_date('2022-06-22', 'yyyy-mm-dd'), 0, 1);
+insert into s20220604.faq (faq_num, faq_category, faq_subject, faq_content, user_id, user_date, faq_check, login_check) VALUES (9999, 1, '주소변경', '주소변경부탁드려요', 'sdsa12', to_date('2022-06-22', 'yyyy-mm-dd'), 0, 1); 
+
+
+-- 배너 유형 1- 공지/ 2- 쿠폰
+-- coupon_banner1.png/event_banner1.png
+insert into s20220604.banner VALUES (SEQ_BANNER_NUM.nextval, 21, '매실 행사', 1, 'event_banner1.png');
+insert into s20220604.banner VALUES (SEQ_BANNER_NUM.nextval, 20, '이거사조 week 럭키 기프트', 1, 'event_banner2.png');
+insert into s20220604.banner VALUES (SEQ_BANNER_NUM.nextval, 1, '6월 신규회원 쿠폰', 2, 'coupon_banner1.png');
+
+
+--상품판매 테이블 시퀀스
+DROP SEQUENCE SEQ_PRO_NUM;
+CREATE SEQUENCE SEQ_PRO_NUM INCREMENT BY 1 START WITH 1017;
+
+--PRODUCT_INFO TABLE
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (100,999,'채소');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (100,101,'야채');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (100,102,'구황작물');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (200,999,'과일');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (200,201,'국산과일');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (200,202,'수입과일');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (300,999,'곡류');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (300,301,'쌀');
+Insert into S20220604.PRODUCT_INFO (PRO_TYPE1,PRO_TYPE2,PRO_CONTENT) values (300,302,'대두류');
+
+--PRODUCT TABLE
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1001,200,201,'lover27',20000,'경북 사과','경상북도 사과 5kg','02fe5a23-d000-4d7b-9fd1-e632a0a60aad_main_apple.jpg','2efa512e-799d-4098-aca3-919d71ff1e9f_write_apple.jpg',to_date('22/05/29','RR/MM/DD'),100,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1002,300,302,'sw7922',9000,'국산 서리태 6kg','유전자 번형을 하지 않은 국산 순수 서리태 6kg','07d69ddf-d4d7-4989-aa5b-75a60e3476f6_main_blackBean.JPG','a7f61ace-46b9-4220-8e94-11b180de7605_write_blackBean.jpg',to_date('22/05/29','RR/MM/DD'),150,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1003,100,101,'min2523',5000,'강원도 고랭지 흙당근 2kg','강원도 고랭지에서 재배한 흙당근입니다.','7f2d232f-64d9-4c4c-b948-5bab174d5ee7_main_carrot.jpg','1ace3363-eb4d-426d-882c-69952d4dc118_write_carrot.jpg',to_date('22/05/29','RR/MM/DD'),70,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1004,300,301,'sw7922',45000,'고소미 아침농산 쌀 10kg','내 가족이 먹는다는 마음으로 재배한 국산 쌀!!','f97b5ab6-d42f-483e-9153-4146778ada9d_main_rice.JPG','1870278b-16a4-414f-8b7b-54a3f3ae1eb6_write_rice.jpg',to_date('22/05/29','RR/MM/DD'),195,5,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1005,100,101,'jny1925',12000,'제주산 청정무 3kg','제주 청정지역에서 기른 무입니다.3kg(한 박스)','b0d6fe1d-5fb0-4cf8-b8da-248cae7bc66d_main_daikon.JPG','26ff42dd-4044-4721-bbd0-764daf94f3b7_write_daikon.jpg',to_date('22/05/29','RR/MM/DD'),182,18,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1006,200,201,'mym339',23000,'하동 햇매실 5kg','2022년산 하동 햇매실입니다. ','ab67d909-8b66-4bad-8205-13555e738de8_main_plum.JPG','b5866570-11bb-47b5-b761-bd845db3ab33_write_plum.jpg',to_date('22/05/29','RR/MM/DD'),91,9,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1007,200,202,'lover27',10000,'블랙라벨 오렌지 3kg','미국산 고당도 오렌지','2478d950-4a27-4631-a821-7a1764046daf_main_orange.JPG','53f142d0-06ec-4908-8bd7-a37ea601f616_write_orange.jpg',to_date('22/05/29','RR/MM/DD'),149,51,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1008,100,102,'mym339',15000,'무안 황토밭 햇 감자 5kg','전라남도 무안 황토밭에서 재배한 국내산 감자 100% ','bf80e4d0-55f0-4644-b822-33693dd8f1bf_main_potato.JPG','f92e40fe-7e68-4859-a7ce-ad9c0ee76332_write_potato.jpg',to_date('22/05/29','RR/MM/DD'),20,130,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1009,100,102,'mym339',20000,'황토밭 고구마 5kg','황토밭에서 직접 재배한 고구마!!','ee71da87-b35c-41a8-84f4-92c7b2c9268f_main_sweetPotato.JPG','8ed2511b-5b65-420d-bd0b-e82860f80ddc_write_sweetPotato.jpg',to_date('22/05/29','RR/MM/DD'),200,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1010,100,101,'min2523',12000,'백다다기 오이 3kg','당일수확 당일발송 백다다기 오이','2d24d6d2-9f1f-45e8-8d51-3094509f5d1c_main_cucumber.JPG','50e2db14-4501-47de-a53b-a67b0bfdf093_write_cucumber.jpg',to_date('22/05/29','RR/MM/DD'),80,20,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1011,100,101,'mym339',33000,'깐마늘 10kg','김장철이 다가 오기 전 미리 준비하세요.','91e4398a-d163-44c2-9cf2-1d50655a78cf_main_garlic.JPG','f83a9738-418d-416f-b26d-1fe89e560bc8_write_garlic.jpg',to_date('22/06/21','RR/MM/DD'),170,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1012,200,202,'lover27',12000,'달콤한 망고 3kg(1박스)','필리핀에서 건너온 달콤한 망고입니다.','44b5dab3-330e-456e-836a-1616222e9b7b_main_mango.JPG','fa7a1de2-4679-4fed-9619-e9d492e16388_write_mango.jpg',to_date('22/06/21','RR/MM/DD'),100,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1013,100,101,'mym339',40000,'햇양파 10kg','밭에서 키운 햇양파입니다.','f606526c-4748-4b48-9d21-bb0cdfe4a476_main_onion.JPG','f36ab4a5-2311-4509-b0fa-eca820757440_write_onion.jpg',to_date('22/06/21','RR/MM/DD'),125,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1014,300,301,'sw7922',42000,'귀리 10kg','건강에 좋은 귀리입니다.','c1f74dda-70d8-4e31-8d3e-d266edb80ffd_main_oats.JPG','0f233874-24fd-4761-b085-aefc8472de9b_write_oats.jpeg',to_date('22/06/21','RR/MM/DD'),45,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1015,100,101,'mym339',9000,'깻잎 1kg(한 박스)','싱싱한 쌈야채 깻잎입니다.','d294194c-f197-4f43-a801-e2254972845b_main_perilla_leaf.JPG','e37958b8-c051-423d-a297-35c93e85724b_main_perilla_leaf.JPG',to_date('22/06/21','RR/MM/DD'),200,0,1);
+Insert into S20220604.PRODUCT (PRO_NUM,PRO_TYPE1,PRO_TYPE2,USER_ID,PRO_PRICE,PRO_TITLE,PRO_WRITE,PRO_PHOTO,PRO_PIC,PRO_DATE,AMOUNT,SELL_AMOUNT,PRO_STATUS) values (1016,100,102,'mym339',16000,'옥수수 5kg(한 박스)','초당 옥수수입니다.','a55ac448-fb67-4bb5-810c-f68c6a82b1c6_main_corn.JPG','5eb1a1e1-ce11-4392-9e0c-f8a4c6ce66f2_write_corn.jpg',to_date('22/06/21','RR/MM/DD'),80,0,1);
+
+--CHECK_PRODUCT
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1001,'junghyun9');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1001,'namwoo');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1002,'running225');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1002,'sw7922');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1003,'min2523');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1004,'jny1925');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1005,'namwoo');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1005,'sdsa12');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1009,'lover27');
+Insert into S20220604.CHECK_PRODUCT (PRO_NUM,USER_ID) values (1010,'mym339');
+
+--결제(주문)테이블
+DROP SEQUENCE SEQ_PAY_TOT_NUM;
+CREATE SEQUENCE SEQ_PAY_TOT_NUM INCREMENT BY 1 start with 61;
+
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (1,60000,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',1,1005,'부재시 경비실 앞에 놔두세요',to_date('22/06/01','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (2,47500,'sdsa12',1,'이건혜','경기도 김포시 양촌읍','010-6666-8877',null,null,'부재시 마을회관 앞에 두세요',to_date('22/06/01','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (3,30000,'sdsa12',1,'이건혜','경기도 김포시 양촌읍','010-6666-8877',1,1003,'부재시 마을회관 앞에 두세요',to_date('22/06/02','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (4,22500,'running225',1,'주석임','서울특별시 강남동 역삼동','010-5555-4444',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/02','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (5,50500,'junghyun9',1,'현정연','강원도 강릉시 초당동','010-4444-3333',null,null,null,to_date('22/06/03','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (6,25500,'junghyun9',1,'현정연','강원도 강릉시 초당동','010-4444-3333',null,null,null,to_date('22/06/03','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (7,47500,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/04','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (8,12500,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',1,1002,'부재시 경비실 앞에 놔두세요',to_date('22/06/04','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (9,27000,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',1,1005,'부재시 경비실 앞에 놔두세요',to_date('22/06/05','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (10,10000,'sdsa12',1,'이건혜','경기도 김포시 양촌읍','010-6666-8877',1,1006,'부재시 마을회관 앞에 두세요',to_date('22/06/05','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (11,14500,'mym339',1,'민영미','전라남도 광주광역시','010-1111-9999',null,null,null,to_date('22/06/06','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (12,17500,'lover27',1,'김시진','부산광역시 해운대구','010-7777-6666',null,null,null,to_date('22/06/06','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (13,12500,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/07','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (14,37500,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',1,1004,'부재시 경비실 앞에 놔두세요',to_date('22/06/07','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (15,22500,'junghyun9',1,'현정연','강원도 강릉시 초당동 초당중학교','010-4444-3333',null,null,'부재시 학교 경비실에 맡겨주세요',to_date('22/06/08','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (16,11500,'running225',1,'주석임','서울특별시 강남동 역삼동','010-5555-4444',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/09','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (17,17500,'sdsa12',1,'이건혜','경기도 김포시 양촌읍','010-6666-8877',null,null,'부재시 마을회관 앞에 두세요',to_date('22/06/09','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (18,17500,'sw7922',1,'안혜영','대구광역시 중구 삼덕동','010-8888-7777',null,null,null,to_date('22/06/10','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (19,22500,'jny1925',1,'장남영','제주특별자치도 제주시','010-2222-1111',null,null,'부재시 감귤밭으로 올라와주세요',to_date('22/06/10','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (20,11500,'lover27',1,'김시진','부산광역시 해운대구','010-7777-6666',null,null,null,to_date('22/06/11','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (21,70500,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',1,1000,'부재시 경비실 앞에 놔두세요',to_date('22/06/11','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (22,12500,'jny1925',1,'장남영','제주특별자치도 제주시','010-2222-1111',null,null,'부재시 감귤밭으로 올라와주세요',to_date('22/06/12','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (23,25500,'sw7922',1,'안혜영','대구광역시 중구 삼덕동','010-8888-7777',null,null,'부재시 경비실에 맡겨주세요',to_date('22/06/12','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (24,14500,'junghyun9',1,'현정연','강원도 강릉시 초당동','010-4444-3333',null,null,null,to_date('22/06/13','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (25,42500,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/13','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (26,14500,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/14','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (27,32500,'jny1925',1,'장남영','제주특별자치도 제주시','010-2222-1111',null,null,'부재시 감귤밭으로 올라와주세요',to_date('22/06/14','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (28,7500,'lover27',1,'김시진','부산광역시 해운대구','010-7777-6666',null,null,null,to_date('22/06/15','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (29,26500,'sw7922',1,'안혜영','대구광역시 중구 삼덕동','010-8888-7777',null,null,'부재시 경비실에 맡겨주세요',to_date('22/06/15','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (30,22500,'running225',1,'주석임','서울특별시 강남동 역삼동','010-5555-4444',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/06/16','RR/MM/DD'));
+
+--mypage
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (1, 1001, 3);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (2, 1004, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (3, 1009, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (4, 1007, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (5, 1005, 4);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (6, 1006, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (7, 1008, 3);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (8, 1010, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (9, 1002, 3);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (10, 1003, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (11, 1006, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (12, 1008, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (13, 1007, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (14, 1001, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (15, 1007, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (16, 1002, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (17, 1008, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (18, 1008, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (19, 1007, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (20, 1002, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (21, 1006, 3);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (22, 1003, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (23, 1006, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (24, 1010, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (25, 1009, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (26, 1005, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (27, 1008, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (28, 1003, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (29, 1010, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (30, 1009, 1);
+
+--장바구니 기본정보
+
+DROP SEQUENCE SEQ_BASKET_NUM;
+CREATE SEQUENCE SEQ_BASKET_NUM INCREMENT BY 1 START WITH 11;
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (1,'sdsa12',to_date('22/06/01','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (2,'namwoo',to_date('22/06/02','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (3,'running225',to_date('22/06/03','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (4,'min2523',to_date('22/06/04','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (5,'mym339',to_date('22/06/05','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (6,'sw7922',to_date('22/06/06','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (7,'1over27',to_date('22/06/07','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (9,'junghyun9',to_date('22/06/09','RR/MM/DD'));
+Insert into S20220604.MAIN_BASKET (BASKET_NUM,USER_ID,BASKET_DATE) values (10,'juy1925',to_date('22/06/10','RR/MM/DD'));
+
+--장바구니
+
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (1,1002,1,to_date('22/06/01','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (2,1001,2,to_date('22/06/02','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (3,1003,3,to_date('22/06/03','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (4,1004,2,to_date('22/06/04','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (5,1006,2,to_date('22/06/05','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (6,1005,3,to_date('22/06/06','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (7,1007,1,to_date('22/06/07','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (9,1009,2,to_date('22/06/09','RR/MM/DD'));
+Insert into S20220604.BASKET (BASKET_NUM,PRO_NUM,BASKET_AMOUNT,BASKET_DATE) values (10,1010,3,to_date('22/06/10','RR/MM/DD'));
+
+
+
+--후기테이블
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('namwoo',1001,'사과가 꿀보다 달아요','흔히 꿀사과라고 하는 사과들을 먹어보면 실제로 그렇게 달지 않는데 이 사과는 진짜 꿀보다 달아요. 꼭 사 먹어보세요 강추합니다.','120220601.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sdsa12',1004,'속이 편안해지는 쌀이에요','속이 안 좋아서 항상 고생하는 40대 입니다. 이 쌀로 밥을 지어 먹었는데 속이 편안하네요. 위가 안 좋으신분들께 추천드립니다.','220220601.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sdsa12',1009,'겨울하면 군고구마','어릴적 추운 겨울 드럼통으로 만들어진 난로에 고구마를 구워 먹던 추억은 모두들 갖고 계시져 오랜만에 고구마를 시켜서 먹었는데 달콤하면서 포근한 맛이 그 때에 아련한 추억이 생각나게 해주네요. ',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('running224',1007,'썩은 오렌지가 왔네요','아무리 수입산이라고 해도 상태가 안 좋은 오렌지가 한 가득이고 심지어 썩은 오렌지도 있었습니다. 1점보다 점수를 덜 줄 수 없어서 1점 드립니다. 절대 사지 마세요.','320220602.jpg',1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('junghyun9',1005,'김장하기 위해서 샀습니다','온 가족이 모여서 김장을 하는데 무 상태가 너무 좋다고 다들 칭찬하더라고요. 달고 단단한게 가격 대비 품질이 매우 좋아요. 김장용 무 구매에 고민하는 분들께 추천드립니다.','420220603.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('junghyun9',1006,'새콤달콤한 매실장아찌의 추억','이번 주말 온 가족이 배송 받은 매실을 가지고 매실 장아찌를 담갔습니다. 어릴적 산에서 매실을 주워다 장아찌를 해먹은 기억이 있었는데, 그 때 제 나이 정도 되는 딸 아이와 함께 매실 장아찌를 담그는데 세월이 느껴지더라고요. 보통 매실은 벌래 먹은 자국을 보거나 매실에서 벌래가 나올 수가 있는데 벌래 먹은 자국 하나 없어서 참 좋았습니다. 이번 주말 아이들과 함께 매실장아찌를 만들어보는게 어떨까요?',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('min2523',1008,'감자국 주민의 소견','저는 지금은 서울에 살고 잇지만 어릴 적에는 감자국이라고 불리는 강원도 강릉에서 살았었습니다. 그렇기에 감자맛에 매우 예민합니다. 강릉 대기리에서 재배한 감자를 먹다가 이런 감자를 먹어보면 좋은 감자가 무엇인지 알 수 있습니다. 얼마나 보관했는지 감자가 물러지고 감자 풋내가 심한게 굉장히 안 좋은 감자를 팔고 있네요. 절대 사지 마세요','520220604.jpg',1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('namwoo',1010,'오이는 악마의 음식입니다.','선척적으로 오이를 싫어하는 사람들이 있습니다. 저는 정말로 먹기 싫지만 저희 어머니께서 제 아이디로 오이를 구매하셨네요. 제발 한 사람 목숨을 살리는 셈 치고 오이 판매를 멈춰주세요.',null,1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('min2523',1002,'아침 대용으로 먹기 참 좋은거 같습니다.','나이가 들면서 아침에 밥을 먹기에는 부담스러워 서리태를 볶아서 간단하게 먹고 있습니다. 품질이 괜찮아서 만족하고 있습니다.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sdsa12',1003,'스튜에는 당근','흙당근이라 손질하는데 번거롭긴 하지만 썩은 부분 없이 싱싱한 당근을 보내주셨습니다. 상품 품질은 만족스러우나 배송이 너무 늦네요 배송까지 일주일이나 넘게 걸렸습니다.','620220605.jpg',3);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('mym339',1006,'피부미용에는 오이','오이 마스크를 만들기 위해서 오이를 샀습니다. 당일 배송으로 2틀만에 금세 배달이 왔네요. 오늘 마스크를 만들어서 해봤는데 피부가 탱글탱글해진거 같네요',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('lover27',1008,'빠른 배송과 좋지 못한 품질','빠른 배송은 장점이라고 할 수 있지만 감자 품질이 좋지 않습니다. 보통 감자를 오래 보관하거나 냉동보관 후 해동할 시 감자가 물렁물렁 해지는데 배달 받은 감자가 딱 그런 감자의 특징을 보였습니다. 햇감자라고 하는데 믿을 수가 없네요',null,1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('namwoo',1007,'웰컴 투 디 호텔 캘리포니아','오랜지의 단맛과 상큼함이 마치 저를 캘리포니아로 데려갔습니다. 무더운 여름 달콤한 오렌지로 여름을 즐기는게 어떨까요?','720220607.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('min2523',1001,'원숭이 엉덩이는 빨개 빨가면 사과 사과는 맛있어','어릴적 불렀던 노래가 생각나는 맛입니다. 원숭이 엉덩이와 같은 선명한 빨간 빛을 띄며 달콤하면서 시원한게 외적인 것과 내적인 것 모두 갖춘 명품 사과입니다.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('junghyun9',1007,'제가 받은 오랜지는 괜찮았네요','리뷰를 보니 어떤 분은 썩은 오랜지가 왔다고 하는데 저는 배송도 빠르고 멀쩡한 오렌지가 왔네요. 수입산이라 편차가 있는거 같은데 사시는 분들 참고하세요.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('running225',1002,'배송이 너무 늦어요','아무리 잘 썩지 않는 곡물류라고 해도 배송에만 2주일이나 걸렸습니다. 상품 품질은 괜찮은데 배송이 불만족스럽습니다.','820220609.jpg',2);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sdsa12',1008,'감자 감자 왕감자~','북한 동요가 생각나게 하는 감자였습니다. 상태가 너무 안 좋아서 북한에서 수입해 와서 파는가 싶었네요.ㅎㅎ','920220609.jpg',1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sw7922',1008,'감자는 감자국에서 사세요','감자가 물렁물렁한게 영 상태가 안 좋습니다. 감자는 역시 강원도에서 사야하는거 같습니다.',null,1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('jny1925',1007,'이 집 오랜지는 뽑기 운이 필요하네요','이전 리뷰들을 보면 어떤 리뷰는 썩은 것이 왔다고 하고 어떤 리뷰들은 좋은 오랜지가 왔다고 하는데 저희 집에 배달 온 오랜지들은 썩지는 않았지만 상태가 좋지 않네요. 배송도 느리고 다시 시키고 싶지 않네요',null,1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('lover27',1002,'배송이 너무 늦는거 같아요','상품 리뷰를 보면 물건을 받는데 2주나 걸리신 분이 있다고 하는데 저는 1주일이나 걸렸네요. 배송사에 문제인지 아니면 출고에 문제인지 이 집에서 물건 시키면 기본 1주일은 잡아야 하는 거 같습니다. 그래도 상품 품질은 괜찮네요',null,2);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('namwoo',1006,'어릴적 할머니가 타주신 매실청','문득 어릴적 할머니가 타주신 매실청이 그리워 시키게 되었습니다. 단단하고 향이 좋은게 품질이 좋아보이네요. 오랜만에 추억을 즐기며 매실청을 담글 수 있었습니다.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('jny1925',1003,'배송이 빨라서 좋아요','배송이 굉장히 빠르게 왔네요. 거기에 굉장히 싱싱해서 생으로 먹어도 단맛이 나네요.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sw7922',1006,'더운 여름 날을 대비해 매실청 하나 어떤가요?','요즘 이상기후니 뭐니 날이 무더운데 매실청 담궈서 얼음 넣어서 시원하게 타 먹으면 좋을거 같네요.','1020220612.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('junghyun9',1010,'더운 여름 날에 오이 하나 어떠세요?','등산을 즐기는 30대 여성입니다. 대관령 고갯길을 오르면서, 물 대신 마시려고 샀습니다. 이번 주말에 등산하면서 먹었는데, 너무 싱싱하고 수분도 많아서 좋았습니다.','1120220613.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('min2523',1009,'호박 고구마! 호박 고구마!','모 드라마에서 나왔던 대사져 맛있는 고구마를 먹을 때면 항상 이 장면이 생각나 웃음이 나오곤 합니다. 배송도 빠르고 맛도 있네요 강추합니다.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('namwoo',1005,'배송이 빠르네요 좋아요','갑자기 꽁치 조림이 먹고 싶어서 시켯는데 빠르게 배송이 와서 만족스러웠습니다.','1220220614.jpg',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('jny1925',1008,'감자 품질이 너무 안 좋네요','감자에 싹도 많이 있고, 물컹물컹하고 이거 작년꺼 보관하던거 배송한 건가요?',null,1);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('lover27',1003,'최고의 다이어트 식품','요즘 살을 빼기 위해서 생 당근을 먹고 있습니다. 흙당근이라 손질하는데 귀찮긴하지만 싼 가격에 대량의 당근을 구할 수 있어서 좋았습니다. 당근 자체도 신선해서 좋은거 같습니다.','1320220615',5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('sw7922',1010,'품질이 좋네요','남편이 등산을 좋아해서 등산 갈 때마다 오이를 챙겨주는데 이전에 마트에서 산 오이는 별 말이 없었는데, 여기서 산 오이는 시원하다고 칭찬을 하더라고요. 추천해요.',null,5);
+Insert into S20220604.REVIEW (USER_ID,PRO_NUM,RE_TITLE,RE_CONTENT,RE_PIC,RE_STAR) values ('running225',1009,'고구마 상태가 좋네요','어머니께서 고구마를 먹고 싶어서 샀는데 외견도 튼실하고 맛도 괜찮아서 만족했습니다.',null,5);
+
+
+
+-- 멤버 추가
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('dingo2','1','구자경','dingo2@gmail.com','010-8989-8989','default_profile1.png','서울특별시 마포구 대흥동 12-20','305호',null,null,null,null,null,null,'1',to_date('22/06/13','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('guc99','1','손석구','guc99@gmail.com','010-9999-7777','default_profile2.png','경기도 고양시 일산동구 백석동','남정시티프라자3차',null,null,null,null,null,null,'1',to_date('22/06/13','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('dongry','1','강동원','dongry@gmail.com','010-6666-8877','default_profile3.png','경기도 김포시 양촌읍','양곡리',null,null,null,null,null,null,'1',to_date('22/06/13','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('hihi56','1','이하이','hihi56@naver.com','010-5555-4444','default_profile4.png','서울특별시 강남구 역삼동','삼원타워',null,null,null,null,null,null,'1',to_date('22/06/13','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('realstar','1','송강호','realstar@naver.com','010-4444-3333','default_profile5.png','강원도 강릉시 초당동','초당순두부길95-5',null,null,null,null,null,null,'1',to_date('22/06/14','RR/MM/DD'),null,null,'1'); 
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('yumi2','1','정유미','yumi2@gmail.com','010-8989-8989','default_profile1.png','서울특별시 마포구 대흥동 12-20','305호',null,null,null,null,null,null,'1',to_date('22/06/20','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('jinjjaru','1','서현진','jinjjaru@gmail.com','010-9999-7777','default_profile2.png','경기도 고양시 일산동구 백석동','남정시티프라자3차',null,null,null,null,null,null,'1',to_date('22/06/20','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('ganada','1','정가람','ganada@gmail.com','010-6666-8877','default_profile3.png','경기도 김포시 양촌읍','양곡리',null,null,null,null,null,null,'1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('imsunny','1','전소니','imsunny@naver.com','010-5555-4444','default_profile4.png','서울특별시 강남구 역삼동','삼원타워',null,null,null,null,null,null,'1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('woochoi','1','최우식','woochoi@naver.com','010-4444-3333','default_profile5.png','강원도 강릉시 초당동','초당순두부길95-5',null,null,null,null,null,null,'1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('mijeong22','1','염미정','mijeong22@naver.com','010-3333-2222','default_profile6.png','서울특별시 상암동'',''월드컵북로','월드컵북로','당도보장','010-3333-2255','default_profile5.png','111-22-33333','서울특별시강남구','학동로 426','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('yumhi','1','염창희','yumhi@naver.com','010-2222-1111','default_profile7.png','제주특별자치도 제주시','오일장서길26','자연주의','010-2222-1166','default_profile4.png','222-22-33333','제주특별자치도 제주시','오일장서길26','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('da1da1','1','양다일','da1da1@naver.com','010-1111-9999','default_profile1.png','전라남도 광주광역시','내방로111','굿뜨래','010-1111-9977','default_profile3.png','333-22-33333','경기도 성남시','성남대로 997','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('rightnow','1','이지은','rightnow@gmail.com','010-8888-7777','default_profile2.png','대구광역시 중구 삼덕동','달구벌대로','건강한밥상','010-8888-7788','default_profile2.png','444-22-33333','충청남도 천안시','천안대로 1347','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('0jiiron','1','공지철','0jiiron@gmail.com','010-7777-6666','default_profile3.png','부산광역시 해운대구','해운대해변로140','더담은','010-7777-6699','default_profile1.png','555-22-33333','경기도 파주시','새꽃로 13','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('noboh','1','안보현','noboh@naver.com','010-1111-9999','default_profile1.png','전라남도 광주광역시','내방로111','경기농산','010-1111-9977','default_profile3.png','333-22-33333','경기도 성남시','성남대로 997','1',to_date('22/06/22','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('suzi','1','배수지','suzi@gmail.com','010-8888-7777','default_profile2.png','대구광역시 중구 삼덕동','달구벌대로','자연다움','010-8888-7788','default_profile2.png','444-22-33333','충청남도 천안시','천안대로 1347','1',to_date('22/06/25','RR/MM/DD'),null,null,'1');
+Insert into S20220604.MEMBER (USER_ID,USER_PW,USER_NAME,EMAIL,CON_TEL,USER_PHOTO,CON_ADDR1,CON_ADDR2,SELL_NAME,SELL_TEL,SELL_PHOTO,SELL_NUM,SELL_ADDR1,SELL_ADDR2,M_LEVEL,JOIN_DATE,NICKNAME,NICK_PHOTO,AUTH_STATUS) values ('wooo1','1','우원재','wooo1@gmail.com','010-7777-6666','default_profile3.png','부산광역시 해운대구','해운대해변로140','수입과일전문','010-7777-6699','default_profile1.png','555-22-33333','경기도 파주시','새꽃로 13','1',to_date('22/06/27','RR/MM/DD'),null,null,'1');
+
+-- check_level
+insert into chk_level values ('mijeong22', 0);
+insert into chk_level values ('yumhi', 0);
+insert into chk_level values ('da1da1', 0);
+insert into chk_level values ('rightnow', 0);
+insert into chk_level values ('0jiiron', 0);
+insert into chk_level values ('noboh', 0);
+insert into chk_level values ('suzi', 0);
+insert into chk_level values ('wooo1', 0);
+
+-- 결제내역
+
+
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (31,47500,'sdsa12',1,'이건혜','경기도 김포시 양촌읍','010-6666-8877',null,null,'부재시 마을회관 앞에 두세요',to_date('22/01/01','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (32,22500,'running225',1,'주석임','서울특별시 강남동 역삼동','010-5555-4444',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/01/02','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (33,50500,'junghyun9',1,'현정연','강원도 강릉시 초당동','010-4444-3333',null,null,null,to_date('22/02/03','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (34,25500,'junghyun9',1,'현정연','강원도 강릉시 초당동','010-4444-3333',null,null,null,to_date('22/02/03','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (35,47500,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/03/04','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (36,14500,'mym339',1,'민영미','전라남도 광주광역시','010-1111-9999',null,null,null,to_date('22/03/06','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (37,17500,'lover27',1,'김시진','부산광역시 해운대구','010-7777-6666',null,null,null,to_date('22/03/06','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (38,12500,'namwoo',1,'고남우','경기도 고양시 일산동구 백석동','010-9999-7777',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/04/07','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (39,37500,'min2523',1,'성민서','서울특별시 상암동','010-3333-2222',1,1004,'부재시 경비실 앞에 놔두세요',to_date('22/04/07','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (40,22500,'junghyun9',1,'현정연','강원도 강릉시 초당동 초당중학교','010-4444-3333',null,null,'부재시 학교 경비실에 맡겨주세요',to_date('22/05/08','RR/MM/DD'));
+Insert into S20220604.PAYMENT (PAY_TOT_NUM,PAY_TOT,USER_ID,PAY_STATE,PAY_NAME,PAY_ADDRESS,PAY_TELL,CP_STATE,CP_NUM,PAY_REQ,PAY_DATE) values (41,11500,'running225',1,'주석임','서울특별시 강남동 역삼동','010-5555-4444',null,null,'부재시 경비실 앞에 놔두세요',to_date('22/05/09','RR/MM/DD'));
+
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (31, 1004, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (32, 1007, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (33, 1005, 4);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (34, 1006, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (35, 1008, 3);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (36, 1006, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (37, 1008, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (38, 1007, 1);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (39, 1001, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (40, 1007, 2);
+insert into s20220604.mypage (pay_tot_num, pro_num, quantity) VALUES (41, 1002, 1);
+
+insert into chatting values (0, 'test', 0, null, null);

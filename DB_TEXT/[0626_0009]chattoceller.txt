@@ -1,0 +1,139 @@
+create or replace PROCEDURE chat_to_celler
+(
+    p_pro_num        in product.pro_num%type,       -- 입력받아올 판매글번호
+    p_pro_user_id    in product.user_id%TYPE,       -- 입력받아온 판매글 올린 판매자 user_id 
+    p_pro_title      in product.pro_title%TYPE,     -- 입력받아온 판매글제목
+    p_user_id        in message.send_user_id%TYPE   -- 입력받아온 로그인유저 id
+)
+IS
+    vn_cnt           NUMBER    :=0;             -- 판매글번호 기준으로 메시지테이블에 user_id 가 있는가 검증한 결과
+    vn_rog_cnt       NUMBER    :=0;             -- 조회된 room_num을 기준으로 participant테이블에 로그인 유저가 있는가 0 이면 판매자랑 대화 처음인것
+    vn_room_num      participant.room_num%type; -- 판매글번호 기준으로 참여자테이블에서 판매자 아이디가 들어간 room_num
+    vn_all_room_num  participant.room_num%type; -- 판매자와 로그인유저 모두있는 room_num
+    v_sell_photo     member.sell_photo%type;          -- 판매자 등록사진
+    vn_first_cnt          NUMBER     :=0;
+BEGIN
+    select count(*) -- 판매글번호 기준으로 참여자테이블에 판매자 user_id 가 있는가 검증
+    into vn_cnt
+    from participant 
+    where user_id in (select user_id 
+                           from   product
+                           where  pro_num = p_pro_num);
+                           
+    select count(*)
+    into vn_first_cnt
+    from participant
+    where user_id = p_user_id;
+    
+    -- 판매자 등록사진
+    select sell_photo
+    into   v_sell_photo
+    from member
+    where user_id = p_pro_user_id;
+
+    -- 조회된 room_num을 기준으로 participant테이블에 로그인 유저가 있는가 0 이면 판매자랑 대화 처음인것
+    select count(user_id)
+    into vn_rog_cnt
+    from participant
+    where room_num in (select room_num
+                        from participant 
+                        where user_id in (select user_id 
+                                            from product 
+                                            where pro_num = p_pro_num))
+    and  user_id = p_user_id  ;       
+
+
+    IF vn_first_cnt = 0 THEN
+        insert into chatting
+        values(
+               (SELECT MAX(room_num)+1 FROM CHATTING),
+                '문의',
+                3, '', v_sell_photo);
+        INSERT INTO PARTICIPANT 
+        values( 
+                (SELECT MAX(room_num) FROM CHATTING),
+                  p_user_id);      
+
+       INSERT INTO PARTICIPANT 
+        values( 
+                (SELECT MAX(room_num) FROM CHATTING),
+                  p_pro_user_id);           
+        
+        INSERT INTO MESSAGE 
+        VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                   1, 3, p_user_id,
+                   p_pro_title||' 문의',
+                  SYSDATE ,'', '');    
+
+    ELSIF vn_cnt = 0 THEN
+
+        INSERT INTO CHATTING 
+        values( 
+              (SELECT MAX(room_num)+1 FROM CHATTING), 
+                 '문의', 
+                3, '', v_sell_photo   );
+        -- p_pro_user_id << 원래 문의 대신 이거였음
+        INSERT INTO PARTICIPANT 
+        values( 
+                (SELECT MAX(room_num) FROM CHATTING),
+                  p_user_id);      
+
+       INSERT INTO PARTICIPANT 
+        values( 
+                (SELECT MAX(room_num) FROM CHATTING),
+                  p_pro_user_id);           
+
+        INSERT INTO MESSAGE 
+        VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                   1, 3, p_user_id,
+                   p_pro_title||' 문의',
+                  SYSDATE ,'', '');     
+        
+ ELSIF  vn_cnt > 0 then
+
+        IF  vn_rog_cnt = 0 then
+
+            INSERT INTO CHATTING 
+            values( 
+                    (SELECT MAX(room_num)+1 FROM CHATTING), 
+                     '문의', 
+                    3, '', v_sell_photo   );
+
+            INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_user_id);      
+
+           INSERT INTO PARTICIPANT 
+            values( 
+                    (SELECT MAX(room_num) FROM CHATTING),
+                      p_pro_user_id);           
+
+            INSERT INTO MESSAGE 
+            VALUES ( (SELECT MAX(room_num) FROM CHATTING),
+                       1, 3, p_user_id,
+                       p_pro_title||' 문의',
+                      SYSDATE ,'', '');  
+
+        ELSIF   vn_rog_cnt > 0 then
+
+                -- 판매글작성한 판매자와 로그인 유저가 모두 들어가있는 room_num 조회
+                select room_num
+                into   vn_all_room_num
+                from   participant
+                where  room_num in (select room_num
+                                    from participant 
+                                    where user_id in (select user_id 
+                                                        from product 
+                                                        where pro_num = p_pro_num))
+                and  user_id = p_user_id  ;
+
+             INSERT INTO MESSAGE 
+             VALUES ( vn_all_room_num,
+                      (SELECT MAX(msg_num)+1 FROM MESSAGE), 
+                      3, p_user_id, p_pro_title||' 문의', SYSDATE, '','' );
+        END IF;
+
+ END IF;
+
+END;
