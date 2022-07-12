@@ -1,6 +1,6 @@
 # http port set
 server:
-  port: 8989
+  port: "사용할 포트 넘버"
   
 spring:
 #File size
@@ -11,15 +11,15 @@ spring:
 #oracle Connect       
   datasource:
      driver-class-name: oracle.jdbc.driver.OracleDriver
-     url:  jdbc:oracle:thin:@localhost:1521/xe
-     username: S20220604
-     password: tiger
+     url:  jdbc:oracle:thin:"호스트이름":"포트번호"/"SID"
+     username: "디비 유저 아이디"
+     password: "디비 유저 비밀번호"
  # gmail Transfer
   mail: 
     host: smtp.gmail.com
     port: 587
-    username: sajomarket@gmail.com
-    password: ymwvtvtszzvhqtul
+    username: 전송할 이메일 입력
+    password: 전송할 이메일 비밀번호 입력
     properties:
       mail:
         smtp:
